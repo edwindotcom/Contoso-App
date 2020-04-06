@@ -1,8 +1,12 @@
 version: 1
-classification: library
+classification: application
 ci_url: github/actions
 slack_channels:
   - contoso-app
+dependencies:
+  - contoso-auth
+  - contoso-core
+  - contoso-payments
 ownership:
 - name: contonso-app
   kind: approle
