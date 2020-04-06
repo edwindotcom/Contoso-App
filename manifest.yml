@@ -1,20 +1,25 @@
 version: 1
-dependencies:
-  - contoso-auth
-  - contoso-mono
+classification: library
+ci_url: github/actions
+slack_channels:
+  - contoso-app
 ownership:
-- name: contoso-app
-  kind: moda
-  maintainer: edwindotcom
-  team: github/oo-epd
-  repo: https://github.com/github/service-hub
-  mention: github/product-engineering
+- name: contonso-app
+  kind: approle
+  maintainer: sallyyoung
+  team: contoso/sre
+  exec_sponsor: patfoo
+  product_manager: patbar
+  volunteers: []
+  repo: https://github.com/contoso/contoso-app
+  mention: contoso/contoso-app
   sev1:
-    pagerduty: https://example.com
-    tta: '30 min'
+    pagerduty: https://hotline.github.com/QE2345
+    tta: '5m'
   sev2:
-    issue: https://github.com/github/service-hub/issues
-    tta: '2 business days'
+    issue: https://github.com/contoso/contoso-app/issues
+    tta: '1 business day'
   sev3:
-    slack: service-hub
-  qos: critical
+    slack: 'sre'
+    tta: None
+  qos: experimental
